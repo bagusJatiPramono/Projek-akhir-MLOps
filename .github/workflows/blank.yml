@@ -28,7 +28,7 @@ jobs:
           context: .
           dockerfile: ./Dockerfile
           tags: ${{ secrets.DOCKER_USERNAME }}/ml-app:latest
-          push: false  # This pushes the image to Docker Hub
+          push: true  # This pushes the image to Docker Hub
 
       - name: Run Docker Container for Tests
         run: |
