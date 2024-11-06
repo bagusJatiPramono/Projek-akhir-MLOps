@@ -23,6 +23,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
+          dockerfile: ./Dockerfile
           tags: user/ml-app:latest
           push: true  # This pushes the image to Docker Hub
 
