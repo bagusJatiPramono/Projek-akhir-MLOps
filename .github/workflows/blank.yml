@@ -24,7 +24,7 @@ jobs:
         with:
           context: .
           dockerfile: ./Dockerfile
-          tags: user/ml-app:latest
+          tags: baguspramono/ml-app:latest
           push: true  # This pushes the image to Docker Hub
 
       - name: Run Docker Container for Tests
