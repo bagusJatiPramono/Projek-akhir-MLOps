@@ -28,8 +28,8 @@ jobs:
           context: .
           dockerfile: ./Dockerfile
           tags: ${{ secrets.DOCKER_USERNAME }}/ml-app:latest
-          push: true  # This pushes the image to Docker Hub
+          push: false  # This pushes the image to Docker Hub
 
       - name: Run Docker Container for Tests
         run: |
-          docker run --rm user/ml-app:latest python -m unittest discover tests
+          docker run --rm ${{ secrets.DOCKER_USERNAME }}/ml-app:latest python -m unittest discover tests
